@@ -80,7 +80,7 @@ int main(){
   print(head);
 
 int item;
-printf("\nEnter a element to insert after this element : \n");
+printf("\nEnter a node : \n");
 scanf("%d",&item);
   head = insert_after_a_given_node(head,item);
 
