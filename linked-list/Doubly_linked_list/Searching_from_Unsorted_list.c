@@ -70,7 +70,7 @@ void print(struct node *head)
     printf("\n");
 }
 
-struct node *Searching(struct node *head,int item)
+struct node *Searching_from_Unsorted_list(struct node *head,int item)
 {
     int flag=0;
     struct node *ptr = head,*Loc=NULL;
@@ -101,7 +101,7 @@ int main()
     printf("Enter an Element to Search : \n");
     scanf("%d",&item);
 
-    Loc = Searching(head,item);
+    Loc = Searching_from_Unsorted_list(head,item);
     if(Loc == NULL)
     {
         printf("The element isn't present in the list !!");
