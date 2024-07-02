@@ -47,12 +47,14 @@ struct node *Deleting_the_node_with_a_given_item_of_information(struct node *hea
 {
     if(head==NULL)
     {
-        printf("\nDelete is not possible beacuse need at least two node!\n");
+        printf("\nDelete is not possible beacuse need at least one node!\n");
     }
 
-    else if(head ->link ==NULL)
+    else if(head ->data == node)
     {
-        printf("\nDelete is not possible beacuse need at least two node!\n");
+       struct node *str=head;
+       head=head->link;
+       free(str);
     }
 
     else
