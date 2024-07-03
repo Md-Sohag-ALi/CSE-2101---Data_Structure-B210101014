@@ -14,15 +14,26 @@ struct node
      tail=temp;
      return tail;
  };
- void print(struct node *tail){
-     struct node *ptr=tail;
- do{
+ void print(struct node *tail)
+{
+    if(tail == NULL)
+    {
+        printf("List is empty !!");
+    }
+    else
+    {
+        struct node *ptr=tail->link;
+        do
+        {
 
-    printf("%d ",tail->data);
-    ptr = ptr->link;
- }while(ptr != tail);
- printf("\n");
- }
+            printf("%d ",ptr->data);
+            ptr = ptr->link;
+        }
+        while(ptr != tail->link);
+    }
+
+    printf("\n");
+}
 int main()
 {
     int data;
