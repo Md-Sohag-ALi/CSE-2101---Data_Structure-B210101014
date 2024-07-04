@@ -75,7 +75,9 @@ struct node *searching_from_unsorted_list(struct node *tail,int node)
         if(ptr->data == node)
         {
             Loc = ptr;
+            break;
         }
+
         ptr = ptr->link;
     }
     while(ptr != tail->link);

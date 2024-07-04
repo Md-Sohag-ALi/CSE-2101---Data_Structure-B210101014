@@ -1,4 +1,5 @@
 
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -66,18 +67,24 @@ void print(struct node *tail)
     printf("\n");
 }
 
-struct node *searching_from_unsorted_list(struct node *tail,int node)
+struct node *searching_from_sorted_list(struct node *tail,int node)
 {
     struct node *ptr,*Loc = NULL;
     ptr = tail->link;
     do
     {
-        if(ptr->data == node)
+        if(ptr->data < node)
+        {
+            ptr = ptr->link;
+        }
+
+        else  if(ptr->data == node)
         {
             Loc = ptr;
+            break;
         }
-        ptr = ptr->link;
     }
+
     while(ptr != tail->link);
 
     return Loc;
@@ -93,7 +100,7 @@ int main()
     printf("Enter a node : \n");
     scanf("%d",&node);
     struct node *Loc;
-    Loc = searching_from_unsorted_list(tail,node);
+    Loc = searching_from_sorted_list(tail,node);
     if(Loc == NULL)
     {
         printf("Not Found !! \n");
