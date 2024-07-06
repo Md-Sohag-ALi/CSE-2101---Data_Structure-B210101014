@@ -78,6 +78,7 @@ struct node *delete_after_a_given_node(struct node *tail,int node)
             ptr->link = ptr2->link;
             if(ptr2 == tail)
                 tail = ptr;
+                free(ptr2);
         }
         ptr = ptr->link;
     }
@@ -93,7 +94,7 @@ int main()
     printf("The Elements of the list : \n");
     print(tail);
     int node;
-    printf("nter a node : \n");
+    printf("Enter a node : \n");
     scanf("%d",&node);
     tail = delete_after_a_given_node(tail,node);
     printf("Now the elements of the list : \n");
