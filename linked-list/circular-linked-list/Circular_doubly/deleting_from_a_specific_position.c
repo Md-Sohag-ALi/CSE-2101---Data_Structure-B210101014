@@ -129,7 +129,7 @@ int main()
 
     int pos;
 
-    printf("Enter a node to search from sorted list : \n");
+    printf("Enter a position : \n");
     scanf("%d",&pos);
     tail = deleting_at_specific_position(tail,pos);
     printf("Now The elements of the list : \n");
