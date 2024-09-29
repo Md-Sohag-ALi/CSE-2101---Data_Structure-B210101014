@@ -22,11 +22,8 @@ struct node *createBSTTree(struct node *root,int key)
         root->left =createBSTTree(root->left,key);
  else if(key > root->data)
         root->right =createBSTTree( root->right,key);
-     else{
+     else
           printf("Duplicate element !\n");
-          return root;
-     }
-
     return root;
 };
 void inorder(struct node *root)

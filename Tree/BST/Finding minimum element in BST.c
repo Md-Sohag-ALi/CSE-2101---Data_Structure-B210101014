@@ -18,14 +18,12 @@ struct node *createBSTTree(struct node *root,int key)
 {
     if(root==NULL)
         return createNode(key);
-   else if(key < root->data)
+    else if(key < root->data)
         root->left =createBSTTree(root->left,key);
- else if(key > root->data)
+    else if(key > root->data)
         root->right =createBSTTree( root->right,key);
-     else{
-          printf("Duplicate element !\n");
-          return root;
-     }
+    else
+        printf("Duplicate element !\n");
 
     return root;
 };
@@ -62,7 +60,7 @@ int main()
     if(temp ==NULL)
         printf("Tree is Empty!\n");
     else
-    printf("\nThe minimum element is = %d \n",temp->data);
+        printf("\nThe minimum element is = %d \n",temp->data);
     return 0;
 }
 

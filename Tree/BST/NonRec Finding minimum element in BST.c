@@ -24,7 +24,6 @@ struct node *createBSTTree(struct node *root,int key)
         root->right =createBSTTree( root->right,key);
      else{
           printf("Duplicate element !\n");
-          return root;
      }
 
     return root;
