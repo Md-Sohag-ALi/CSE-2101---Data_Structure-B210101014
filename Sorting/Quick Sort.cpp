@@ -24,17 +24,7 @@ void Q_Sort(vector<int>&arr, int st, int end)
     {
         int PiIdx = Partition(arr, st, end);
         Q_Sort(arr, st,PiIdx-1);
-         for(int i =0 ; i < 5 ; i++)
-    {
-        cout <<arr[i]<<" ";
-    }
-    cout<<endl;
         Q_Sort(arr, PiIdx+1,end);
-         for(int i =0 ; i < 5 ; i++)
-    {
-        cout <<arr[i]<<" ";
-    }
-    cout<<endl;
     }
 }
 int main()

@@ -3,7 +3,7 @@ using namespace std;
 void Merge (int arr[], int left,int  mid, int right)
 {
     int nl,nr;
-    nl = mid -left + 1;
+    nl = mid - left + 1;
     nr = right - mid ;
     int L[nl],R[nr];
     for(int i =0; i<nl ; i++)
